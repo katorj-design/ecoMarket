@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text ="back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-searchbar placeholder="Busca un producto"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-slides pager color="secondary">
+          <ion-slide>
+            <ion-card color="secondary">
+              <ion-card-header>
+                <ion-card-subtitle>Producto destacado</ion-card-subtitle>
+                <ion-card-title>Mercado Orgánico</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Productos seleccionados para que participes del comercio local e inclusivo.
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card color="secondary">
+                <img src="/assets/img/slide-verduras.jpg">
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-chip outline color="secondary">
+          <ion-icon name="pricetag"></ion-icon>
+          <ion-label>Promociones</ion-label>
+        </ion-chip>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item button routerLink="/detalle-prod">
+          <ion-thumbnail slot="start">
+            <img src="/assets/img/tofu.jpg">
+          </ion-thumbnail>
+          <ion-label>
+            <h3>Nuggets de Tofu</h3>
+            <ion-text color="secondary">
+              <h1>$14.300</h1>
+            </ion-text>
+          </ion-label>
+          <ion-icon name="cart-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item button routerLink="/detalle-prod">
+          <ion-thumbnail slot="start">
+            <img src="/assets/img/cubiertos.jpg">
+          </ion-thumbnail>
+          <ion-label>
+            <h3>Cubiertos de bambú</h3>
+            <ion-text color="secondary">
+              <h1>$30.900</h1>
+            </ion-text>
+          </ion-label>
+          <ion-icon name="cart-outline" slot="end"></ion-icon>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item routerLink="/categorias">
+          <ion-label>
+            Ver todas las categorías
+          </ion-label>
+          <ion-thumbnail slot="end">
+            <img src="/assets/img/dairy.png">
+          </ion-thumbnail>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-toolbar>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home" routerLink="/home">
+        <ion-icon src="/assets/icon/home.svg"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="productos" routerLink="/productos">
+        <ion-icon src="/assets/icon/manzana.svg"></ion-icon>
+        <ion-label>Productos</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="ecoTips" routerLink="/eco-tips">
+        <ion-icon src="/assets/icon/leaf.svg"></ion-icon>
+        <ion-label>Ecotips</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="carrito" routerLink="/detalle-prod">
+        <ion-icon src="/assets/icon/carrito-de-compras.svg"></ion-icon>
+        <ion-label>Carrito</ion-label>
+        <ion-badge color="primary">1</ion-badge>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-toolbar>

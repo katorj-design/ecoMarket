@@ -1,0 +1,7 @@
+{
+  "name": "ecoMarket",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
